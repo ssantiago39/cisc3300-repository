@@ -1,0 +1,38 @@
+﻿Sean Santiago
+CISC 3300 SP24 
+
+
+Homework 1 
+1. What is HTML? What does it do? 
+* HTML is the coding language that is used to create and organize content on the web. It provides a framework for organizing certain content of the web page such as text, images, links, and other forms of content, and this allows browsers to display web pages. HTML uses different elements and tags to create the structure and meaning of content, such as headings, paragraphs, lists, and links.
+
+
+2. Access https://www.fordham.edu/. In your own words, describe how this webpage uses structure to convey meaning and navigation options to the user. 
+* The Fordham webpage has a structure centered around the most vital features which are the two access bars at the top right of page, one starting with Login and ending in News, and the other right below it starting with About and ending with Search. In the middle front of the page is a large image with a view of NYC and other images of Fordham activities Scrolling down on the page, you will find smaller information boxes with images and text, with clickable links to each of their respective pages. And there is a preview and clickable link to a youtube video of a preview of the Fordham University Changemakers. Overall it goes in order of descending importance with the clickable links most likely to be used at the top, and the more informational previews at the bottom with the use of images and paragraphs.. 
+
+
+3. What is an HTML element? Tag? Attribute? 
+* An HTML element consists of a start tag, the content within them, and an end tag. For example <p> Content within Paragraph </p>. A tag is a part of an element, enclosed in angle brackets (<p>) which defines its type (<p> means paragraph). Attributes provide additional information about an element such as class and are written inside the start tag ( <p class= "ExClass">).
+
+
+4. What does it mean when an element has semantic meaning? And structural meaning? 
+* An element has semantic meaning when it conveys the purpose or meaning of content and element type, such as <header> for a page header or <paragraph> for a paragraph. Structural meaning refers to the way an element organizes content within a document such as <section> tags that group together related elements for layout purposes. 
+
+
+5. What is the default behavior when submitting a HTML form?
+* When an HTML form is submitted, the default behavior is to send the data of the form to the server which is chosen in the action attribute using the method defined in the method attribute such as GET. However in the case that no action is provided, the form submits to the current URL.
+
+
+6. Create a webpage for a fake business of your choosing. It should have: a. an h1 element with the title of the business 
+b. a p element with a description of the business 
+c. a subsection with a sub heading and p element describing that section d. create an images directory and put a relevant image in the directory, include that image on the webpage via a src attribute with a relative path. 
+e. a contact form which should have: 
+i. a text input element for first name with a label 
+ii. a text input element for last name with a label 
+iii. an email element with a label 
+iv. a submit element with a value of “Submit” 
+
+
+
+
+Please create a directory called homework-1 in your local repository, include a .txt file with the answers for questions 1-5 and an .html file for question 6 on submission.
