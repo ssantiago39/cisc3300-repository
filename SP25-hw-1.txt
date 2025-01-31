@@ -1,7 +1,6 @@
 ﻿Sean Santiago
 CISC 3300 SP24 
 
-
 Homework 1 
 1. What is HTML? What does it do? 
 * HTML is the markup language (not a programming language) that is used to create and organize content on the web. It is a framework for organizing certain content of the web page such as text, images, links, and other forms of content. HTML uses different elements and tags to create the structure and meaning of content, such as headings, paragraphs, tables, and links.
