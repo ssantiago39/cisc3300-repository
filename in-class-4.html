@@ -2,30 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centered Divs</title>
-  <style>
-    .parent {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .child {
-      width: 100px;
-      height: 100px;
-      margin: 5px;
-      background-color: white;
-      border: 1px solid black;
-    }
-  </style>
+  <title>Three Children Divs</title>
 </head>
 <body>
-  <div class="parent">
-    <div class="child"></div>
-    <div class="child"></div>
-    <div class="child"></div>
+  <div>
+    <div class="children-div"></div>
+    <div class="children-div"></div>
+    <div class="children-div"></div>
   </div>
 </body>
 </html>
+
+<style>
+    body {
+      margin: 0;
+      text-align: center;
+    }
+    .children-div {
+      width: 100px;
+      height: 100px;
+      background-color: white;
+      border: 1px solid black;
+      display: inline-block;
+      margin: 5px;
+    }
+  </style>
