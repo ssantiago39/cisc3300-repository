@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hw4</title>
+</head>
+<body>
+
+    <h1> Homework 4</h1>
+  <script>
+    // Array and object ___________________________________________________________
+    const cats = [
+    {
+        name: 'Charlie',
+        adoptionStatus: 'available'
+    },
+    {
+        name: 'Lily',
+        adoptionStatus: 'not-available'
+    },
+    {
+        name: 'Coco',
+        adoptionStatus: 'available'
+    },
+    {
+        name: 'Oreo',
+        adoptionStatus: 'not-available'
+    },
+    {
+        name: 'Luna',
+        adoptionStatus: 'available'
+    },
+    {
+        name: 'Milo',
+        adoptionStatus: 'available'
+    },
+    {
+        name: 'Lola',
+        adoptionStatus: 'not-available'
+    },
+    {
+        name: 'Leo',
+        adoptionStatus: 'available'
+    },
+    {
+        name: 'Willow',
+        adoptionStatus: 'available'
+    },
+    {
+        name: 'Bella',
+        adoptionStatus: 'not-available'
+    },
+    {
+        name: 'Max',
+        adoptionStatus: 'available'
+    },
+    {
+        name: 'Cleo',
+        adoptionStatus: 'available'
+    },
+    {
+        name: 'Lucy',
+        adoptionStatus: 'not-available'
+    },
+    {
+        name: 'Daisy',
+        adoptionStatus: 'available'
+    },
+
+    
+];
+
+    const cat = {name:"Pinecone", age:13, type:'Munchkin', cuteness: 9001};
+
+    // _________________________________________________________________________
+
+    //6
+    const result = cats.filter(cat => cat.adoptionStatus === 'available').map(cat => cat.name);
+    const newSentence = 'My adopted cats are: ' + result.join(', ') + '.';
+    console.log("Adopted Cats Sentence:", newSentence);
+   
+    // 7
+    const randomNumber = Math.random() * 10;
+    let newString;
+    if (randomNumber > 5) {
+      newString = "greater than five!";
+    } else {
+      newString = "less than five!";
+    }
+    console.log("Random Number:", randomNumber, "Result:", newString);
+
+
+    // 8
+    const keys = Object.keys(cat);
+    for (let i = 0; i < keys.length; i++) {
+      console.log(cat[keys[i]]);
+    }
+
+    // 9
+    if (1 == '1') {  
+      console.log("1 == '1' is true (integer and string)");
+    }
+    if (1 === '1') {  
+      console.log("blank");
+    }
+
+    // 10
+    const cuteCats = cats.map(function(cat) {
+      return cat.name + ' is cute!';
+    });
+    console.log("Cute Cats Array:", cuteCats);
+  </script>
+</body>
+</html>
