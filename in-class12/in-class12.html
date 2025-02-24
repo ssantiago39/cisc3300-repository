@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>In-class12</title>
+    </head>
+
+    <body>
+        <h1>In-Class-12</h1>
+        <div>
+            <script>
+
+            function primaryFunction() 
+            {
+                console.log("hello from primary")
+
+                const primaryVariable = "hello from secondary";                
+                secondaryFunction();
+
+                function secondaryFunction() 
+                {
+                    console.log(primaryVariable); 
+                }
+            }
+            primaryFunction(); 
+
+            </script>
+        </div>
+
+    </body>
+</html>
