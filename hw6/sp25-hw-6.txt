@@ -1,0 +1,40 @@
+﻿Sean Santiago
+CISC 3300 S25 
+Homework 6 
+1. Define hoisting and closures in JS. 
+*  Each time a script enters a new execution context a new scope is created and variables, functions, and arguments are “hoisted” to the top of the execution context. 
+* For every execution context the scope includes current execution contexts, variable objects, and the variables object for each parent execution context, which is known as closures. More specifically it refers to the ability of the function to remember the parent scope’s variables and functions.
+
+
+2. What is PHP? What do server side languages do in web development? 
+* PHP stands for “PHP: Hypertext Processor” and it is a server side scripting language which takes in and processes user input, and interacts with other servers. Server Side languages can do a variety of things in terms of web development such as the handling of dynamic content, the controlling of databases, tracking sessions and other security type content.
+
+
+
+
+3. What are some examples of how the PHP and JavaScript programming languages are alike and how they differ? 
+* Two major ways that PHP and JavaScript are alike are that they are both dynamic and weakly typed. This means that variables can hold different types of data which can be changed at runtime and are coming in from a database based on input, and that it performs type coercion where datatypes are converted from one to another to make them make sense and be comparable during things like comparisons. One difference they have is that JavaScript uses prototypes while PHP uses the traditional class based approach to OOP. Another difference that they have is that JS uses an automatic garbage collector to get memory back from discarded objects, and PHP uses reference counting which is when the variables reference hits 0 the memory is regained. Another difference is that JS uses a single threaded approach which is an event loop for asynchronous tasks, while PHP uses a multithreaded approach which creates new threads
+
+
+4. Why pick PHP over another server side scripting language like Python or Node? 
+* Although each server side scripting language has their own uses, benefits, and functionality, there are various reasons to pick PHP over Python or Node. For one, PHP is very easy to learn in comparison with the other languages. Another reason to use it is its high quality track record as a ton of websites of used PHP and proved its reliability and quality. More reasons to use PHP is that it is more web oriented then the other languages, hasa vast network of support and information from its long standing history, and is vastly supported throughout the web.
+
+
+5. Compare and contrast echo and var_dump. 
+* Echo and var_dump are both used to respond to requests. Echo outputs one or more expressions while var_dump “dumps” information about either one or multiple variables such as type and value
+
+
+6. Create a new PHP project, in the index.php file create: 
+a. An associative array with keys and values. 
+b. Loop through the array and echo out a string that contains each key and value. 
+
+
+7. Add to question 6: 
+a. Create a function that has: 
+i. a set return type 
+ii. an optional parameter 
+iii. a typed parameter 
+iv. and call your function with values that have the correct data types 
+
+
+8. Create another PHP project that includes a “resources” directory. In the resources directory create an HTML file that has elements to show an image, also place an image in the resources directory. When the domain is accessed in a browser(localhost), return the HTML page with the working image.
