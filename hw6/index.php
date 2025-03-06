@@ -30,7 +30,7 @@ echo "17 multiplied by (2): " . multiplyNumber(17) . "<br>";
 // 8
 
 
-readfile("resources/page.html");
+readfile("resources/hw6.html");
 
 
 ?>
