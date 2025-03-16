@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homework 7</title>
+
+</head>
+<body>
+    <h1>Note</h1>
+
+    <div id="messageContainer"></div>
+
+    <form action="cisc3300/app/controllers/controller.php" method="POST">
+        <input type="text" name="title" placeholder="Enter title" required>
+        <textarea name="description" placeholder="Enter Note" required></textarea>
+        <button type="submit">Submit Note</button>
+    </form>
+
+    <script>
+        fetch("messages.php")
+            .then(response => response.text())
+            .then(html => document.getElementById("messageContainer").innerHTML = html);
+    </script>
+</body>
+</html>
+
+<style>
+    body {
+        background-color: white;
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+        color: black;
+        font-weight: normal;
+    }
+
+    button {
+        width: 100%;
+        background: blue;
+        color: white;
+        border: 2px solid black;
+
+    }
+
+    .error {
+        background-color: red;
+    }
+
+    .success {
+        background-color: green;
+    }
+</style>
