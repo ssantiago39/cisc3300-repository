@@ -9,16 +9,18 @@
 
     <div id="messageContainer"></div>
 
-    <form action="cisc3300/app/controllers/controller.php" method="POST">
+    <form action="/app/controllers/controller.php" method="POST">
         <input type="text" name="title" placeholder="Enter title" required>
         <textarea name="description" placeholder="Enter Note" required></textarea>
         <button type="submit">Submit Note</button>
     </form>
 
     <script>
-        fetch("messages.php")
+        document.addEventListener("DOMContentLoaded", () => {
+        fetch("messages.php" + location.search)
             .then(response => response.text())
             .then(html => document.getElementById("messageContainer").innerHTML = html);
+}); 
     </script>
 </body>
 </html>
@@ -40,7 +42,6 @@
         background: blue;
         color: white;
         border: 2px solid black;
-
     }
 
     .error {
@@ -50,4 +51,4 @@
     .success {
         background-color: green;
     }
-</style>
+</style> 
