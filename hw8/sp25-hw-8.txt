@@ -1,0 +1,36 @@
+﻿Sean Santiago
+CISC 3300 S25 
+Homework 8 
+
+
+1. What are sessions and cookies? What do they do? 
+* Sessions are what store information and data about the user and their preferences on the server. A cookie is a text file made, where a website tells the browser to keep and store data about the website’s user and the actions they made during their visit. 
+
+
+2. What is SQL? MySQL? What are relational databases? 
+* SQL (Structured query language) is the standard language for creating and manipulating databases. MySQL is a relational database program (and relational database management system - RDBMS) that uses SQL queries. Relational databases are structured databases that use relationships between data (tables) using keys, so that we can identify and access specific desired pieces of data.
+
+
+3. What is normalization in SQL? 
+* Normalisation refers to the process that is used when making tables and the relationships between them so that data isn't duplicated. This is used for the sake of efficiency and accuracy. This process sets the tables and its columns in such a way that it is organized and there are no logical inconsistencies. Relationships between tables allow the data to be scaled and normalized.
+
+
+4. What are primary and foreign keys? 
+* Primary keys are the fields that are used in uniquely identifying records in a table. The requirements for it are that it can’t be null, it has to be unique (no repeats), and there can be only one per table. Foreign keys are the fields that reference the primary keys in another table, the data in these fields are compatible, and the records must exist first in the primary table before the foreign one. These keys are a fundamental part of data normalization
+
+
+5. Write statements to: 
+a. create a new database in phpmyadmin (or use the one from the in class assignment) 
+b. create a notes table, include the following columns: 
+i. id, which should be an integer type, have space for 11 characters, not be nullable, and auto increment, set the id column as the primary key 
+ii. title, which should be an varchar type, have space for 80 characters, and not be nullable 
+iii. description, which should be an text type, not be nullable 
+6. Write statements to 
+a. insert some data 
+b. update some data 
+c. delete some data 
+7. Write queries to 
+a. select all notes and order them by name in reverse alphabetical order 
+b. select the second note in the table only, assume that you don’t know the ID number of it 
+c. select all notes that have descriptions which contain vowels 
+Include SQL statements from questions 5-7 in a sql file in your submission.
