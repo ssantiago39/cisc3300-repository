@@ -42,7 +42,7 @@ select  * from Notes order by title desc;
 select * from Notes order by id limit 1 offset 1;
 
 --7c
-select * from notes where description like '%a%'
+select * from Notes where description like '%a%'
     or description like '%e%'
     or description like '%i%'
     or description like '%o%'
