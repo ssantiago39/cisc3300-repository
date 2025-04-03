@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ice Cream</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-3">Search For Ice Cream Flavors</h2>
+    <div class="input-group mb-3">
+        <input id="search-text" type="text" class="form-control" placeholder="Enter flavor">
+        <button id="search-button" class="btn btn-primary">Search</button>
+    </div>
+    <div id="products-container"></div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#search-button").click(function () {
+            const query = $('#search-text').val();
+            const url = query ? `http://localhost:8888/api/products?flavor=${query}` : `http://localhost:8888/api/products`;
+            $.getJSON(url, function (data) {
+                $('#products-container').html('');
+                if (data.length) {
+                    data.forEach(product => {
+                        $('#products-container').append(`
+                            <div class="card mb-3 p-3">
+                                <strong>Flavor:</strong> ${product.flavor}<br>
+                                <strong>Price:</strong> $${product.price$}
+                            </div>
+                        `);
+                    });
+                } else {
+                    $('#products-container').html('<p>No matching flavors found.</p>');
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
