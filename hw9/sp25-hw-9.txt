@@ -1,0 +1,17 @@
+﻿CISC 3300 S25 
+Homework 9 
+
+
+1. What are relationships in SQL? Joins? 
+* In SQL, since we are dealing with tables and data, it is important not to repeat data or to have any duplicates. In order to avoid this, we use a process called normalization which uses relationships in SQL to avoid duplication. Relationships refers to associations or connections between tables that have already been established (you are not creating them after the fact). They are based upon primary and foreign keys, and are established upon common fields between the tables. Joins refer to how we implement relationships in order to request the desired data from the two or more tables that you need it from.
+2. How do joins and relationships interact? 
+* Joins refer to how we implement relationships. When writing a join, the on keyword is used to indicate the relationship between the primary and foreign keys of the respective tables. The keys indicate which of the rows in the table are connected and should be matched, which in turn, helps to correctly define the relationships of the tables. 
+3. What’s a PDO? a DSN? 
+* A DSN (Data Source Name) is a string that has information about our connection to the database, like for example the host and the name of it. A PDO is a built in class that comes with PHP that allows you to more easily interact with databases. It represents and manages the connection to the database. It can be used for features such as prepared statements, and error handling.
+4. What are prepared statements? Why do we need them? 
+* Prepared Statements are parameterized and reusable SQL queries that separates the SQL from the user input. This makes the developer have to write the SQL commands separately from the data that is being inputted from the users. They can be used for protection against SQL injections (which are when hackers try to run malicious sql code into a database) because the user is inputting data, rather than sql code being executed.
+5. What does an .env file do? 
+* A .env file stores your database credentials or other specific and private information. It separates the configuration of the environment from being in the specific code in your files which makes your information more secure. This also allows you to change your credentials without having to update your main code files.
+
+
+6. Create a PHP project in an MVC style. It should have the ability to search for a product type(use your fictitious business for inspiration), from a MySQL database, and display it. Add some basic styling.
