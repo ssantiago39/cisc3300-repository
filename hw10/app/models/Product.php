@@ -18,7 +18,7 @@ class Product extends Model {
         $query = "select * from IceCream";
         return $this->query($query);
     }
-
+ 
     public function getProductById($id) {
         $query = "select * from IceCream where id = :id";
         return $this->query($query, ['id' => $id]);
