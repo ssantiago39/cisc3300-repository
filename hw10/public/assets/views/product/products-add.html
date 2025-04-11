@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Ice Cream</title>
+    <link rel="stylesheet" href="/assets/styles/icecream.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <a href="/" class="button">Back to Flavors</a>
+        <h2>Add New Flavor</h2>
+        <p>Heres where you add.</p>
+        <form id="form-id">
+            <label for="flavor">Flavor Name</label>
+            <input type="text" id="flavor" placeholder="Enter flavor name">
+
+            <label for="price">Price</label>
+            <input type="text" id="price" placeholder="Enter price">
+
+            <button type="submit" class="button submit">Add</button>
+        </form>
+        <div id="error-container"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#form-id').on('submit', function (e) {
+                e.preventDefault();
+
+                const flavor = $('#flavor').val();
+                const price = $('#price').val();
+
+                $.ajax({
+                    url: `/api/products`,
+                    type: "POST",
+                    data: { flavor, price },
+                    dataType: "json",
+                    success: function () {
+                        window.location.replace("/");
+                    },
+                    error: function (data) {
+                        $('#error-container').html('')
+                        $.each(data.responseJSON, function (key, value) {
+                            $('#error-container').append(`<div class='error'>${value}</div>`)
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html> 
