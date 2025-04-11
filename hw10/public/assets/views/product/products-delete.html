@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Flavor</title>
+    <link rel="stylesheet" href="/assets/styles/icecream.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <a href="/" class="button">Back to Flavors</a>
+        <h2>Delete Ice Cream Flavor</h2>
+        <p id="delete-flavor-name">Hers where you delete</p>
+        <button class="button delete" id="delete-button">Delete</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            const urlArray = window.location.pathname.split("/");
+            const id = urlArray[2];
+
+            $.ajax({
+                url: `/api/products/${id}`,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    const product = data[0];
+                    $('#delete-flavor-name').text(`Are you sure you want to delete ${product.flavor}?`);
+                }
+            });
+
+            $('#delete-button').click(function () {
+                $.ajax({
+                    url: `/api/products/${id}`,
+                    type: "DELETE",
+                    dataType: "json",
+                    success: function () {
+                        window.location.replace("/");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+ 
