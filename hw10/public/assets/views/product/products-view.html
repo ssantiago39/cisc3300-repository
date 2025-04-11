@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ice Cream Flavors</title>
+    <link rel="stylesheet" href="/assets/styles/icecream.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Ice Cream Flavors</h2>
+        <p>All these flavors</p>
+        <div id="products-container"></div>
+        <a href="/add-product" class="button add">Add Flavor</a>
+    </div>
+
+    <script>
+    $(document).ready(function () {
+    $.ajax({
+        url: `/index.php/api/products`,
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            $('#products-container').html('');
+            $.each(data, function (key, value) {
+                $('#products-container').append(`
+                    <div class="product-item">
+                        <span class="flavor">${value['flavor']} - $${value['price']}</span>
+                        <span>
+                            <a href="update-product/${value['id']}" class="button edit">Edit</a>
+                            <a href="delete-product/${value['id']}" class="button delete">Delete</a>
+                        </span>
+                    </div>
+                `);
+            });
+        }
+    });
+});
+
+    </script>
+
+</body>
+</html>
