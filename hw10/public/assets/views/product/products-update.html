@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Flavor</title>
+    <link rel="stylesheet" href="/assets/styles/icecream.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <a href="/" class="button">Back to Flavors</a>
+        <h2>Update Ice Cream Flavor</h2>
+        <p>Heres where you update.</p>
+        <form id="form-id">
+            <label for="flavor">Flavor Name</label>
+            <input type="text" id="flavor">
+
+            <label for="price">Price</label>
+            <input type="text" id="price">
+
+            <button type="submit" class="button submit">Update Flavor</button>
+        </form>
+        <div id="error-container"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            const urlArray = window.location.pathname.split("/");
+            const id = urlArray[2];
+
+            $.ajax({
+                url: `/api/products/${id}`,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    const product = data[0];
+                    $('#flavor').val(product.flavor);
+                    $('#price').val(product.price);
+                }
+            });
+
+            $('#form-id').on('submit', function (e) {
+                e.preventDefault();
+
+                const flavor = $('#flavor').val();
+                const price = $('#price').val();
+
+                $.ajax({
+                    url: `/api/products/${id}`,
+                    type: "PUT",
+                    data: { flavor, price },
+                    dataType: "json",
+                    success: function () {
+                         window.location.replace("/");
+                    },
+                    error: function (data) {
+                        $('#error-container').html('')
+                        $.each(data.responseJSON, function (key, value) {
+                            $('#error-container').append(`<div class='error'>${value}</div>`)
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
